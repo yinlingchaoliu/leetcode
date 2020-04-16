@@ -13,7 +13,7 @@ aux_source_directory(. DIR_SRCS)
 add_subdirectory(util)
 #add_subdirectory(array)
 add_subdirectory(list)
-#add_subdirectory(tree)
+add_subdirectory(tree)
 #add_subdirectory(graph)
 
 #生成文件
@@ -25,7 +25,7 @@ message(${CMAKE_CURRENT_SOURCE_DIR})
 add_executable(${MAIN_BIN} ${DIR_SRCS})
 
 # 添加链接库
-target_link_libraries(${MAIN_BIN} util list)
+target_link_libraries(${MAIN_BIN} util list tree)
 
 # 指定安装路径
 #install (TARGETS ${MAIN_BIN} DESTINATION bin)
